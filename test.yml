@@ -1,0 +1,19 @@
+config:
+  target: "https://heart-rate-monitor-hcmus.herokuapp.com"
+
+phases:
+  duration: 60
+  arrivalRate: 20
+
+
+scenarios:
+  - flow:
+    -
+      get:
+        url: "/"
+    - 
+      post:
+        url: "/api/users/login"
+        json:
+          email: "test11@gmail.com"
+          password: "test11@"
